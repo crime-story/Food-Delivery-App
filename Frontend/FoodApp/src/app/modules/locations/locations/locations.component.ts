@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-locations',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  public logout(): void {
+    localStorage.setItem('Role', 'BasicUser');
+    this.router.navigate(['/login']);
+  }
 }
