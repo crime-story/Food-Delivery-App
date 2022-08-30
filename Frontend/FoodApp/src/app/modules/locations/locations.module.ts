@@ -12,7 +12,8 @@ import {MaterialModule} from "../material/material.module";
   ],
   imports: [
     CommonModule,
-    LocationsRoutingModule
+    LocationsRoutingModule,
+    MaterialModule
   ]
 })
 export class LocationsModule { }

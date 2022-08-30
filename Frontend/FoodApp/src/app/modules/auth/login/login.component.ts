@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AbstractControl, FormControl, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-login',
@@ -7,15 +8,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  public loginForm: FormGroup = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl(''),
+  });
+  
   constructor(
     private router: Router,
   ) { }
 
+  // getters
+  get username(): AbstractControl | null {
+    return this.loginForm.get('username');
+  }
+
+  get password(): AbstractControl | null {
+    return this.loginForm.get('password');
+  }
+
   ngOnInit(): void {
   }
 
-  public login(): void {    
+  public login(): void {
     localStorage.setItem('Role', 'Admin');
     this.router.navigate(['/locations']);
   }
