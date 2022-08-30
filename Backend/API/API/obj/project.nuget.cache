@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C+zwxnGmB9c4nSWRjDRVGgyBrT92IO6txAeEtUT3kYzokM8BYyqs1PqMCswnV+gbAVHBDdu71g4FTrLGg8vAsg==",
+  "dgSpecHash": "t4QJjfR4luNyGSVC/Qux0gRpmflSwUVGDwUdYARI87l/Lv15skS5Qg6L0rNfoKvjRw6R6eB1+yQjDmS4moXo1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rober\\OneDrive - unibuc.ro\\Documents\\GitHub\\Food-Delivery-Platform\\API\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\rober\\Drive\\Documents\\GitHub\\Food-Delivery-Platform\\Backend\\API\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
