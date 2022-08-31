@@ -13,6 +13,6 @@ export class LocationsService {
   ) { }
 
   public getAll(): Observable<any> {
-    return this.http.get(`${this.url}/Get-select`);
+    return this.http.get(`${this.url}/getAll`);
   }
 }

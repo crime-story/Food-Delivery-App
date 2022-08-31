@@ -22,7 +22,7 @@ namespace API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MyProject", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
 
                 //This is for solving a swagger error
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
@@ -54,6 +54,16 @@ namespace API
                         },
                         new List<string>()
                     }
+                });
+            });
+
+            builder.Services.AddCors(opt =>
+            {
+                opt.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
                 });
             });
 
@@ -121,6 +131,7 @@ namespace API
 
             app.UseAuthorization();
 
+            app.UseCors();
 
             app.MapControllers();
 

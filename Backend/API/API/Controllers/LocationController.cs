@@ -17,7 +17,7 @@ namespace API.Controllers
         }
 
         [HttpGet("getAll")]
-        [Authorize(Policy = "BasicUser")]
+        //[Authorize(Policy = "BasicUser")]
         public async Task<IActionResult> GetLocations()
         {
             var locations = manager.GetLocations();
@@ -26,7 +26,7 @@ namespace API.Controllers
         }
 
         [HttpGet("getIds")]
-        [Authorize(Policy = "BasicUser")]
+        //[Authorize(Policy = "BasicUser")]
         public async Task<IActionResult> GetIds()
         {
             var idList = manager.GetLocationsIdsList();
@@ -35,7 +35,7 @@ namespace API.Controllers
         }
 
         [HttpGet("GetWithRestaurants")]
-        [Authorize(Policy = "BasicUser")]
+        //[Authorize(Policy = "BasicUser")]
         public async Task<IActionResult> GetLocationsWithRestaurants()
         {
             var locationsWithRestaurants = manager.GetLocationsWithRestaurants();
@@ -45,7 +45,7 @@ namespace API.Controllers
 
 
         [HttpGet("byCity/{city}")]
-        [Authorize(Policy = "BasicUser")]
+        //[Authorize(Policy = "BasicUser")]
         public async Task<IActionResult> GetLocationsByCity([FromRoute] string city)
         {
             var locationsByCity = manager.GetLocationByCity(city);
@@ -54,7 +54,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "Admin")]
         public async Task<IActionResult> Create([FromBody] LocationModel locationModel)
         {
             manager.Create(locationModel);
@@ -63,7 +63,7 @@ namespace API.Controllers
         }
 
         [HttpPut]
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "Admin")]
         public async Task<IActionResult> Update([FromBody] LocationModel locationModel)
         {
             manager.Update(locationModel);
@@ -72,7 +72,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "Admin")]
         public async Task<IActionResult> Delete([FromRoute] string id)
         {
             manager.Delete(id);
