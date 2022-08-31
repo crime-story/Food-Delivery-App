@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AbstractControl, FormControl, FormGroup } from "@angular/forms";
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
   
   constructor(
     private router: Router,
+    private dataService: DataService,
   ) { }
 
   // getters
@@ -30,6 +32,8 @@ export class LoginComponent implements OnInit {
   }
 
   public login(): void {
+    console.log(this.loginForm.value);
+    this.dataService.changeDataUser(this.loginForm.value);
     localStorage.setItem('Role', 'Admin');
     this.router.navigate(['/locations']);
   }

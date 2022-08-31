@@ -1,3 +1,10 @@
 <button mat-raised-button (click)="logout()">
     Logout
 </button>
+<p>
+    Logged User: {{ loggedUser.username }}
+</p>
+
+<app-child [messageFromParent]="parentMessage"
+ (messageFromChild)="receiveMessage($event)"
+></app-child>
