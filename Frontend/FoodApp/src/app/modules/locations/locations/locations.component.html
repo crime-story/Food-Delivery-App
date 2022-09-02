@@ -46,6 +46,15 @@
       </td>
     </ng-container>
 
+    <ng-container matColumnDef="info">
+      <th mat-header-cell *matHeaderCellDef>Profile</th>
+      <td mat-cell *matCellDef="let element" (click)="goToLocationInformations(element.id)">
+        <mat-icon>
+          info
+        </mat-icon>
+      </td>
+    </ng-container>
+
     <ng-container matColumnDef="edit">
       <th mat-header-cell *matHeaderCellDef>Edit</th>
       <td mat-cell *matCellDef="let element" (click)="editLocation(element)">
@@ -54,8 +63,6 @@
         </mat-icon>
       </td>
     </ng-container>
-
-
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

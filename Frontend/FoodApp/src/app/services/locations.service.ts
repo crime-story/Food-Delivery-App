@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Location } from '../interfaces/location';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +17,15 @@ export class LocationsService {
     return this.http.get(`${this.url}/getAll`);
   }
 
-  public addLocation(location: any): Observable<any> {
+  public getLocationByCity(city: any): Observable<any> {
+    return this.http.get(`${this.url}/byCity/${city}`);
+  }
+
+  public addLocation(location: Location): Observable<any> {
     return this.http.post(`${this.url}/`, location);
   }
 
-  public editLocation(location: any): Observable<any> {
+  public editLocation(location: Location): Observable<any> {
     return this.http.put(`${this.url}/`, location);
   }
 

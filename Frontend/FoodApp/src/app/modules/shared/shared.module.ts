@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { AddEditLocationComponent } from './add-edit-location/add-edit-location.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HoverBtnDirective } from 'src/app/hover-btn.directive';
 
 
 
 @NgModule({
-  declarations: [AddEditLocationComponent],
+  declarations: [AddEditLocationComponent, HoverBtnDirective],
   imports: [
     CommonModule,
     MaterialModule,
@@ -16,8 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   entryComponents: [
     AddEditLocationComponent
   ],
-  // exports: [
-  //   HoverBtnDirective,
-  // ]
+  exports: [
+    HoverBtnDirective,
+  ]
 })
 export class SharedModule { }

@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
 import { LocationsService } from 'src/app/services/locations.service';
 import { AddEditLocationComponent } from '../../shared/add-edit-location/add-edit-location.component';
+import { Location } from '../../../interfaces/location';
 
 @Component({
   selector: 'app-bands',
@@ -16,7 +17,7 @@ export class LocationsComponent implements OnInit, OnDestroy {
   public loggedUser!: { username: string; password: string; };
   public parentMessage = 'message from parent';
   public locations = [];
-  public displayedColumns = ['id', 'country', 'city', 'street', 'edit', 'delete'];
+  public displayedColumns = ['id', 'country', 'city', 'street', 'info', 'edit', 'delete'];
 
   constructor(
     private router: Router, 
@@ -97,6 +98,10 @@ export class LocationsComponent implements OnInit, OnDestroy {
 
   public editLocation(location: any): void {
     this.openModal(location);
+  }
+
+  public goToLocationInformations(id : any): void {
+    let ceva = this.router.navigate(['/location', id]);
   }
 
 }
