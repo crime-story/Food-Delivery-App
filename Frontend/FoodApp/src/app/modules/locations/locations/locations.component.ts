@@ -8,7 +8,7 @@ import { AddEditLocationComponent } from '../../shared/add-edit-location/add-edi
 import { Location } from '../../../interfaces/location';
 
 @Component({
-  selector: 'app-bands',
+  selector: 'app-locations',
   templateUrl: './locations.component.html',
   styleUrls: ['./locations.component.scss'],
 })

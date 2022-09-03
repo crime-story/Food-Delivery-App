@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AbstractControl, FormControl, FormGroup } from "@angular/forms";
 import { DataService } from '../../../services/data.service';
+// import { AuthService } from '../../../services/loginserver.service';
 
 @Component({
   selector: 'app-login',
@@ -36,5 +37,9 @@ export class LoginComponent implements OnInit {
     this.dataService.changeDataUser(this.loginForm.value);
     localStorage.setItem('Role', 'Admin');
     this.router.navigate(['/locations']);
+  }
+
+  public signup(): void {
+    this.router.navigate(['/signup']);
   }
 }

@@ -17,7 +17,7 @@ namespace API.Controllers
         }
 
         [HttpGet("getAll")]
-        [Authorize(Policy = "BasicUser")]
+        //[Authorize(Policy = "BasicUser")]
         public async Task<IActionResult> GetProducts()
         {
             var products = manager.GetProducts();
@@ -26,7 +26,7 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(Policy = "BasicUser")]
+        //[Authorize(Policy = "BasicUser")]
         public async Task<IActionResult> GetProductById([FromRoute] string id)
         {
             var product = manager.GetProductById(id);
@@ -35,7 +35,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "Admin")]
         public async Task<IActionResult> Create([FromBody] ProductModel productModel)
         {
             manager.Create(productModel);
@@ -44,7 +44,7 @@ namespace API.Controllers
         }
 
         [HttpPut]
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "Admin")]
         public async Task<IActionResult> Update([FromBody] ProductModel productModel)
         {
             manager.Update(productModel);
@@ -53,7 +53,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Policy = "Admin")]
+        //[Authorize(Policy = "Admin")]
         public async Task<IActionResult> Delete([FromRoute] string id)
         {
             manager.Delete(id);

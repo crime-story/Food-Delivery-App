@@ -4,11 +4,12 @@ import { AddEditLocationComponent } from './add-edit-location/add-edit-location.
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HoverBtnDirective } from 'src/app/hover-btn.directive';
+import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
 
 
 
 @NgModule({
-  declarations: [AddEditLocationComponent, HoverBtnDirective],
+  declarations: [AddEditLocationComponent, HoverBtnDirective, AddEditProductComponent],
   imports: [
     CommonModule,
     MaterialModule,

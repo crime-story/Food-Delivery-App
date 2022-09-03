@@ -11,13 +11,13 @@ import { Location } from '../../../interfaces/location';
 })
 export class LocationComponent implements OnInit {
 
-  public subscription: Subscription | undefined;
+  public subscription!: Subscription;
   public city: any;
-  public location: Location | undefined {
-    id: 'default id';
-    country: 'default country';
-    city: 'default city';
-    street: 'default street';
+  public location: Location = {
+    country: 'Default country',
+    city: 'Default city',
+    street: 'Default street',
+    id: 'Default ID',
   };
 
   constructor(
@@ -43,7 +43,7 @@ export class LocationComponent implements OnInit {
       (error: any) => {
         console.error(error);
       }
-    );
+    )
   }
 
 }
