@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class LoginserverService {
-  public url="https://localhost:44334/api/Authentication"
+  public url="https://localhost:44334/api/authentication"
   constructor(
     private http:HttpClient
     ) { }

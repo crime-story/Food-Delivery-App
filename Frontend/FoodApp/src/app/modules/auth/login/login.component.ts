@@ -40,6 +40,6 @@ export class LoginComponent implements OnInit {
   }
 
   public signup(): void {
-    this.router.navigate(['/signup']);
+    this.router.navigate(['auth/signup']);
   }
 }

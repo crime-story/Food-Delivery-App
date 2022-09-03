@@ -14,7 +14,7 @@ const routes: Routes = [
     component: LocationsComponent
   },
   {
-    path: 'location/:id',
+    path: 'location/:city',
     component: LocationComponent,
   }
 ];

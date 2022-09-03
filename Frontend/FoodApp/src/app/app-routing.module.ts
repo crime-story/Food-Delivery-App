@@ -22,11 +22,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'login',
-    loadChildren: () =>import('src/app/modules/auth/auth.module').then( m=> m.AuthModule),
-  },
-  {
-    path: 'signup',
+    path: 'auth',
     loadChildren: () =>import('src/app/modules/auth/auth.module').then( m=> m.AuthModule),
   }
 ];

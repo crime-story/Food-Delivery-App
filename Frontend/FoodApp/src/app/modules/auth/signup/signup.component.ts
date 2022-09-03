@@ -59,7 +59,7 @@ export class SignupComponent implements OnInit, OnDestroy  {
     this.signupService.signup(this.signupForm.value).subscribe(
       (result) => {
         alert('Success on signup!');
-        //this.router.navigate(['/login']);
+        this.router.navigate(['/login']);
       },
       (error) => {
         alert('Error on signup!');

@@ -27,7 +27,8 @@ export class LocationComponent implements OnInit {
 
   ngOnInit() {
     this.subscription = this.route.params.subscribe(params => {
-      this.city = +params['city'];
+      this.city = params['city'];
+      console.log(this.city);      
       if (this.city) {
         this.getLocation();
       }

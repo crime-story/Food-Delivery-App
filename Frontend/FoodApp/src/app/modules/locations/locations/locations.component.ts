@@ -100,8 +100,8 @@ export class LocationsComponent implements OnInit, OnDestroy {
     this.openModal(location);
   }
 
-  public goToLocationInformations(id : any): void {
-    let ceva = this.router.navigate(['/location', id]);
+  public goToLocationInformations(city : any): void {
+    let ceva = this.router.navigate(['/location', city]);
   }
 
 }
