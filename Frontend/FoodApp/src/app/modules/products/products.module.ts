@@ -3,15 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products/products.component';
+import { MaterialModule } from '../material/material.module';
+// import { MailFormatPipe } from 'src/app/mail-format.pipe';
+import { ChildComponent } from './child/child.component';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
   declarations: [
-    ProductsComponent
+    ProductsComponent,
+    ChildComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
-  ]
+    ProductsRoutingModule,
+    MaterialModule
+  ],
 })
 export class ProductsModule { }

@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HoverBtnDirective } from 'src/app/hover-btn.directive';
 import { AddEditProductComponent } from './add-edit-product/add-edit-product.component';
+import { MailFormatPipe } from 'src/app/mail-format.pipe';
 
 
 
@@ -13,13 +14,13 @@ import { AddEditProductComponent } from './add-edit-product/add-edit-product.com
   imports: [
     CommonModule,
     MaterialModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   entryComponents: [
     AddEditLocationComponent
   ],
   exports: [
-    HoverBtnDirective,
+    HoverBtnDirective
   ]
 })
 export class SharedModule { }

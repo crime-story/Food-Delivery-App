@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './modules/shared/shared.module';
-import { MailFormatPipe } from './mail-format.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MailFormatPipe,
+    AppComponent
   ],
   imports: [
     BrowserModule,

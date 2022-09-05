@@ -24,7 +24,7 @@ export class LocationsComponent implements OnInit, OnDestroy {
     private dataService: DataService,
     private locationsService: LocationsService,
     public dialog: MatDialog,
-    ) {}
+    ) { }
 
   ngOnInit() {
     this.subscription = this.dataService.currentUser.subscribe(
@@ -48,7 +48,7 @@ export class LocationsComponent implements OnInit, OnDestroy {
 
   public logout(): void {
     localStorage.setItem('Role', 'BasicUser');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth']); // redirecting to login page :)
   }
 
   public receiveMessage(event: any): void {
@@ -60,7 +60,7 @@ export class LocationsComponent implements OnInit, OnDestroy {
       (result) => {
         console.log(result);
         let newLocations = this.locations.filter((x: any) => x.id !== id);
-        this.locations = newLocations
+        this.locations = newLocations;
       },
       (error) => {
         console.error(error);
